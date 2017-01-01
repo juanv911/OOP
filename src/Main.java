@@ -23,6 +23,7 @@ public class Main {
 		//instance.binarySearch(binValues,binSize,3);
 		//instance.linkedList();
 		//instance.FindLargest(binValues);
-		instance.removeDuplicates(binValues);
+		//instance.removeDuplicates(binValues);
+		System.out.print(instance.findOccurence(binValues, 3));
 	}
 }

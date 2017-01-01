@@ -62,14 +62,15 @@ public class OOP {
 		System.out.println("Enter Numbers");
 		
 		int myArray[] = new int[size];
-		
+		// Add input values into array
 		for(int i=0;i<myArray.length;i++) {
 			myArray[i] = keyboard.nextInt();
 		}
-		Arrays.sort(myArray);
+		//Arrays.sort(myArray);
 		int occurrence[]= new int[40];
 		System.out.println("Number Occurrences");
 		
+		// Count the occurrences
 		for(int j=0;j<myArray.length;j++){
 			occurrence[myArray[j]]++;
 		}
@@ -79,6 +80,21 @@ public class OOP {
 			}
 		}
 		keyboard.close();
+	}
+	// Return number of occurrences of a particular number
+	public int findOccurence(int values[], int target){
+		int result = 0;
+		int occurence[] = new int[values.length];
+		for(int i=0;i<values.length;i++){
+			occurence[values[i]]++;
+		}
+		for(int j = 0;j<occurence.length;j++){
+			if(j == target){
+				result = occurence[j];
+			}
+		}
+		return result;
+		
 	}
 	// Remove duplicates using HashSet
 	public void removeDuplicates(int values[]){
